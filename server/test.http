@@ -1,0 +1,3 @@
+GET http://localhost:3000/games
+###
+GET http://localhost:3000/vereine

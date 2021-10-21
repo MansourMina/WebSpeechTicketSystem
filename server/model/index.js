@@ -1,3 +1,7 @@
-const daten = require('./Testdaten.json');
+const daten = require('./Testdaten.js');
 
-console.log(daten);
+const getGames = () => daten.spiele;
+
+const getVereine = () => daten.vereine;
+
+module.exports = { getGames, getVereine };
