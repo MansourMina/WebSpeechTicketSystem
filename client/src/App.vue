@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="grey darken-3"
       dark
     >
       <div class="d-flex align-center">
@@ -44,12 +44,19 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
 
-export default {
-  name: 'App',
+Vue.use(Vuetify)
 
-  data: () => ({
-    //
-  }),
-};
+export default new Vuetify({
+  theme: { dark: true },
+})
+// export default {
+//   name: 'App',
+
+//   data: () => ({
+//     //
+//   }),
+// };
 </script>
