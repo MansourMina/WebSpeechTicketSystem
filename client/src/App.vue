@@ -1,62 +1,87 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="grey darken-3"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <div class="talk buttonContainer">
+      <h1>Hi, want to talk?</h1>
+      <v-btn @click="startRecognition()">Click me</v-btn>
+    </div>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <router-view/>
-    </v-main>
+    <div style="position: absolute; top: -9999px; left: -9999px">
+      <p class="text"></p>
+    </div>
   </v-app>
 </template>
 
 <script>
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
+export default {
+  data() {
+    return {
+      SpeechRecognition:
+        window.SpeechRecognition || window.webkitSpeechRecognition,
+      recognition: '',
+    };
+  },
+  created() {
+    this.recognition = new this.SpeechRecognition();
 
-Vue.use(Vuetify)
+    this.recognition.onstart = function() {
+      console.log('Activated');
+    };
 
-export default new Vuetify({
-  theme: { dark: true },
-})
-// export default {
-//   name: 'App',
+    this.recognition.onresult = function(e) {
+      const current = e.resultIndex;
+      const script = e.results[current][0].transcript;
+      this.readLoud(script);
+    };
+  },
+  methods: {
+    async startRecognition() {
+      const speech = new SpeechSynthesisUtterance();
+      speech.text = 'Hallo, ich bin der Sprach assistent';
+      await window.speechSynthesis.speak(speech);
 
-//   data: () => ({
-//     //
-//   }),
-// };
+      // this.recognition.start();
+      await axios({
+        url: 'http://'
+      })
+    },
+
+    readLoud(message) {
+      const finalMessage = message.toLowerCase();
+      const speech = new SpeechSynthesisUtterance();
+
+      speech.text = 'Bitte wiederholen Sie es';
+      console.log(finalMessage);
+
+      if (finalMessage.includes('stop')) {
+        speech.text = 'okay';
+        speech.cancel();
+      }
+
+      speech.volume = 1.5;
+      speech.rate = 1.2;
+      speech.pitch = 2;
+      window.speechSynthesis.speak(speech);
+    },
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+body {
+  font-family: 'Arial';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonContainer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+h1 {
+  color: rgba(69, 69, 69, 1);
+  line-height: 2em;
+}
+</style>
