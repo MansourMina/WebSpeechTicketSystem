@@ -1,13 +1,13 @@
 {
-  "name": "testplf",
+  "name": "webspeech",
   "version": "1.0.0",
-  "description": "a simple test plf",
+  "description": "webspeech ticket system",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint . --ext .js"
   },
-  "author": "RB",
+  "author": "FW",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
