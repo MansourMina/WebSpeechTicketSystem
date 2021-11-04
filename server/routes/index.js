@@ -1,7 +1,8 @@
 const express = require('express');
-const {} = require('../controllers/index.js');
-// const asyncHandler = require('express-async-handler');
+const { getGames, getVereine } = require('../controllers/index.js');
 
 const router = express.Router();
+router.get('/games', getGames);
+router.get('/vereine', getVereine);
 
 module.exports = router;
