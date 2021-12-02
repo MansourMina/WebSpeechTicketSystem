@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-card class="mx-auto" max-width="400">
+  <v-container class="d-flex flex-wrap justify-center">
+    <v-card class="ma-3" max-width="400">
       <v-img
         class="white--text align-end"
         height="200px"
@@ -25,7 +25,7 @@
         </div>
       </v-card-text>
     </v-card>
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="ma-3" max-width="400">
       <v-img
         class="white--text align-end"
         height="200px"
@@ -50,7 +50,7 @@
         </div>
       </v-card-text>
     </v-card>
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="ma-3" max-width="400">
       <v-img
         class="white--text align-end"
         height="200px"
@@ -75,7 +75,7 @@
         </div>
       </v-card-text>
     </v-card>
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="ma-3" max-width="400">
       <v-img
         class="white--text align-end"
         height="200px"
