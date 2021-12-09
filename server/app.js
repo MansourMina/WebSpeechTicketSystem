@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const path = require('path');
+var cors = require('cors');
 const routes = require('./routes');
 const { errorHandler, notFound } = require('./middleware/errorHandler');
 require('colors');
@@ -9,6 +10,7 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
 app.use(morgan('dev'));
 
 app.use(express.static(path.join(__dirname, '/public')));
