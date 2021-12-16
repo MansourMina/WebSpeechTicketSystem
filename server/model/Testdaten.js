@@ -1,9 +1,12 @@
 const spiele = [
   {
     id: 1,
-    Spiel: 'Polen - Österreich',
-    Liga: 'Bundesliga',
-    Spieler: 'Spieler1, Spieler2, Spieler3, Spieler4, ...',
+    Heim: 'Österreich',
+    Gast: 'Polen',
+    heim_logo:
+      'https://www.fasent-shop.de/689-large_default/flagge-oesterreich-austria-at-150x90cm-90x150cm.jpg',
+    gast_logo: 'https://stickermaster.de/412-large_default/polen-flagge.jpg',
+    Spiel: 'Länderspiel',
     VIP: false,
     Preis: 240,
     Datum: '21.01.2022',
@@ -11,29 +14,41 @@ const spiele = [
   },
   {
     id: 2,
-    Spiel: 'FC Bayern München - SK Rapid',
-    Liga: 'Europa League',
-    Spieler: 'Spieler1, Spieler2, Spieler3, Spieler4, ...',
+    Heim: 'SK Rapid',
+    Gast: 'FC Bayern München',
+    heim_logo:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/SK_Rapid_Wien_Logo.svg/815px-SK_Rapid_Wien_Logo.svg.png',
+    gast_logo:
+      'https://img.fcbayern.com/image/upload/q_auto,f_auto/w_800,h_1067,c_pad/eCommerce/produkte/20459/mousepad-logo.png',
+    Spiel: 'Freundschaftsspiel',
     VIP: true,
     Preis: 200,
-    Datum: '21.11.2021',
-    Ort: 'Rapid-Stadion | Allianz-Stadion',
+    Datum: '21.01.2022',
+    Ort: 'Rapid-Stadion',
   },
   {
     id: 3,
-    Spiel: 'FK Austria Wien - SK Rapid Wien',
-    Liga: 'Bundesliga',
-    Spieler: 'Spieler1, Spieler2, Spieler3, Spieler4, ...',
+    Heim: 'FK Austria Wien',
+    Gast: 'SK Rapid',
+    heim_logo:
+      'https://upload.wikimedia.org/wikipedia/de/thumb/4/49/Austria_Wien.svg/2000px-Austria_Wien.svg.png',
+    gast_logo:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/SK_Rapid_Wien_Logo.svg/815px-SK_Rapid_Wien_Logo.svg.png',
+    Spiel: 'Österreichisches Bundesliga Spiel',
     VIP: false,
     Preis: 100,
     Datum: '15.12.2021',
-    Ort: 'Sturm-Graz-Stadion | Merkur-Arena',
+    Ort: 'Sturm-Graz-Stadion',
   },
   {
     id: 4,
-    Spiel: 'FK Austria Wien - FC Mina Ägypten',
-    Liga: 'Bundesliga',
-    Spieler: 'Spieler1, Spieler2, Spieler3, Spieler4, ...',
+    Heim: 'FK Austria Wien',
+    Gast: 'FC Bayern München',
+    heim_logo:
+      'https://upload.wikimedia.org/wikipedia/de/thumb/4/49/Austria_Wien.svg/2000px-Austria_Wien.svg.png',
+    gast_logo:
+      'https://img.fcbayern.com/image/upload/q_auto,f_auto/w_800,h_1067,c_pad/eCommerce/produkte/20459/mousepad-logo.png',
+    Spiel: 'Freundschaftsspiel',
     VIP: false,
     Preis: 100,
     Datum: '11.12.2021',
@@ -41,13 +56,16 @@ const spiele = [
   },
   {
     id: 5,
-    Spiel: 'FK Austria Wien - FC Bayern München',
-    Liga: 'Bundesliga',
-    Spieler: 'Spieler1, Spieler2, Spieler3, Spieler4, ...',
+    Heim: 'Österreich',
+    Gast: 'Deutschland',
+    heim_logo:
+      'https://www.fasent-shop.de/689-large_default/flagge-oesterreich-austria-at-150x90cm-90x150cm.jpg',
+    gast_logo: 'https://node01.flagstat.net/media/catalog/product/detail/12720.png',
+    Spiel: 'Länderspiel',
     VIP: true,
     Preis: 250,
-    Datum: '06.11.2021',
-    Ort: 'Rapid-Stadion | Allianz-Stadion',
+    Datum: '06.05.2022',
+    Ort: 'Ernst-Happel-Stadion',
   },
 ];
 
@@ -60,7 +78,7 @@ const vereine = [
   {
     id: 2,
     name: 'FC Bayern München',
-    img: 'https://bilder.ottoversand.at/i/empiriecom/5cc07448ebd38be975e757d1bb837512?$format_dv_mob_075$',
+    img: 'https://img.fcbayern.com/image/upload/q_auto,f_auto/w_800,h_1067,c_pad/eCommerce/produkte/20459/mousepad-logo.png',
   },
   {
     id: 3,

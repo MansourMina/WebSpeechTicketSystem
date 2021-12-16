@@ -1,17 +1,17 @@
 <template>
   <v-app>
-    <v-app-bar app color="grey darken-3" dark>
+    <v-app-bar app color="grey darken-3" dark height="90">
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="logo.png"
           transition="scale-transition"
-          width="40" 
+          width="80"
         />
 
-        <h1>Tiket Service</h1>
+        <h1>Ticket Service</h1>
       </div>
 
       <v-spacer></v-spacer>
@@ -45,4 +45,3 @@ export default new Vuetify({
 //   }),
 // };
 </script>
-
