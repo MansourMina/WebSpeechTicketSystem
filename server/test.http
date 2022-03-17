@@ -1,3 +1,17 @@
 GET http://localhost:3000/games
 ###
 GET http://localhost:3000/vereine
+###
+GET http://localhost:3000/ticket
+###
+POST http://localhost:3000/ticket
+Content-Type: application/json
+
+{
+    "sektor":"D",
+    "rang":"1",
+    "bereich":"F",
+    "firstname":"Filip",
+    "lastname":"Wojtasik",
+    "email":"Wojtasik.f03@htlwienwest.at"
+}
